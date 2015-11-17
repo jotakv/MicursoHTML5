@@ -1,3 +1,5 @@
+
+/*Esta es la hoja de estilos asociada a cv.html*/
 body{
 
 		color: #1B1D1C;
@@ -18,17 +20,34 @@ section{
 	background-color: blue;
 }
 
+
+/*------------------------------------*\
+    $header-main
+\*------------------------------------*/
 .header-main{
 	color: #2526CB;
 }
 
+/*------------------------------------*\
+    $article-home
+\*------------------------------------*/
 .article-home{
-	background-color: #e0e0e0;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	color:gray;
 }
+
 .color-red{
 	color: red;
+}
+
+
+/*------------------------------------*\
+    $Seccion dos
+\*------------------------------------*/
+/*esta parte pone el color de fondo naranja*/
+.second-section{
+	background-color: orange;
+
 }
