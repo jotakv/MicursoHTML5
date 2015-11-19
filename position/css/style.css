@@ -1,0 +1,42 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: mycounter;
+}
+li {
+    background-color: yellow;
+    margin-bottom: 5px;
+    line-height: 2;
+    position: relative;
+}
+
+li:first-child {
+    background-color: red;
+    width: 100%;
+}
+
+li:last-child {
+    background-color: green;
+}
+
+li:after {
+    /*esto es lo que muestyra las notas*/
+    content: attr(data-notas);
+    font-size: 10px;
+    background-color: white;
+    width: 2em;
+    line-height: 2;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    position: absolute;
+    top: 2px;
+    right: -5px;
+
+}
+li:before {
+   /* content: counter(mycounter);
+    counter-increment: mycounter;*/
+
+}

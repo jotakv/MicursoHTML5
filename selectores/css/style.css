@@ -1,0 +1,33 @@
+
+/*Esta es la hoja de estilos asociada a cv.html
+
+	EL ASTERISTOC SIGNIFICA TODO
+*/
+ /*este reset hace que el contenido no afecte el ancho a la caja*/
+ /**/
+*{
+	box-sizing;border-box;
+	/*aqui faltarian los prefijos de navegadores*/
+}
+
+body{
+
+		 
+		 margin: 0;
+		 padding:0;
+}
+li{
+
+	list-style-type: none;
+	position: relative;
+
+}
+
+.nav__item{
+
+	background-color: yellow;
+
+}
+.nav__list::after{
+	background-color: red;
+ }

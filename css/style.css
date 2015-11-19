@@ -1,10 +1,21 @@
 
-/*Esta es la hoja de estilos asociada a cv.html*/
+/*Esta es la hoja de estilos asociada a cv.html
+
+	EL ASTERISTOC SIGNIFICA TODO
+*/
+ /*este reset hace que el contenido no afecte el ancho a la caja*/
+ /**/
+*{
+	box-sizing;border-box;
+	/*aqui faltarian los prefijos de navegadores*/
+}
+
 body{
 
 		color: #1B1D1C;
 		background: #70C2A6;
 		 font-family: 'Open Sans', sans-serif;
+		 /*esto es un reset*/
 		 margin: 0;
 		 padding:0;
 }
@@ -24,9 +35,9 @@ section{
 /*------------------------------------*\
     $header-main
 \*------------------------------------*/
-.header-main{
-	color: #2526CB;
-}
+	.header-main{
+		color: #2526CB;
+	}
 
 /*------------------------------------*\
     $article-home
@@ -49,5 +60,45 @@ section{
 /*esta parte pone el color de fondo naranja*/
 .second-section{
 	background-color: orange;
+	/*top right bottom left
+		padding:20px 5px 20px 5px ;
 
+	*/
+	padding:20px 5px 20px 5px ;
+}
+.table{
+	display: table;
+}
+
+.nav{
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+	.nav__list{
+
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		margin:0;
+		padding: 0;
+		border:1px solid olive;
+	}
+
+	.nav_item{
+		display: table-cell;
+		border: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: arial;
+		background-color: green;
+		color: white;
+	}
+	.nav__item--current{
+		background-color: aqua;
+		display: table-caption;
+	}
+
+  main{
+display: table-cell;
 }
