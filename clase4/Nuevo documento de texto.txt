@@ -1,0 +1,3 @@
+display fixed para que el nav bar en el movil se quede fijo
+
+media queries

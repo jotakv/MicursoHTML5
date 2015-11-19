@@ -10,14 +10,65 @@
 	/*aqui faltarian los prefijos de navegadores*/
 }
 
+/*soy un media query*/
+/*suelen colocarse al final*/
+/*esto quiere decir que desde esta resolucion hasta el siguiente punto se aplica la regla*/
+/*cuando la resolucion llegue a 600 el color de fondo se pone rojo*/
+/*se puede llegar a controloar las resoluciones para tosod los dispositivos*/
+@media all and (min-width: 600px){
+	html{
+		font-size:100%;
+	}
+	section{
+		background-color: red;
+	}
+}
+
+
+/*cuando la resolucion sea de */
+
+
+@media all and (min-width: 400px){
+	html{
+		font-size:100%;
+	}
+	section{
+		background-color: red;
+	}
+}
+
+
+/*esto hace que cunado se imprima la web sea en blanco y negro*/
+@media print {
+	*{
+		color:black!important;
+		background-color: transparent;
+		background-image: none;
+		/*agraego*/
+	}
+}
+
+*, *::before, *::after{
+	-webkitbox-sizing:border-box;
+	box-sizing:border-box;
+}
+
 body{
 
 		color: #1B1D1C;
-		background: #70C2A6;
+		background: transparent;
 		 font-family: 'Open Sans', sans-serif;
 		 /*esto es un reset*/
 		 margin: 0;
 		 padding:0;
+		 outline: 0 ;
+		 vertical-align: baseline;
+}
+
+img{
+	max-width: 100%;
+	border-width: 0;
+	vertical-align: middle;
 }
 
  
@@ -102,3 +153,73 @@ section{
   main{
 display: table-cell;
 }
+
+.nav--top {
+	  position: absolute;
+	  top:0;
+	  left:1vw;
+    z-index: 10;
+    width:  $nav-width;
+    height: $nav-height;
+    color: $nav-color;
+    overflow: hidden;
+    cursor: pointer;
+ 
+	/**
+     * Place a hamburger (don’t hate the player, hate the game...) icon
+     * over the top of our nav element.
+     */
+    &:after {
+        content: "☰";
+        font-size: $nav-icon-size;
+        width: 1em;
+        line-height: 1;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top:  -($nav-icon-size / 2);
+        margin-left: -($nav-icon-size / 2);
+     }   
+}
+
+  .nav--top__list {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    //Este padding top baja el contenido respecto a la hamburguesa
+    padding-top: $nav-height;
+    position: absolute;
+    top:   0;
+    left:  0;
+    background-color: $nav-background;
+    box-shadow:inset -100px -50px 100px 100px rgba(0,0,0,0.2);
+    /* 
+    * Usamos VW porque con % tomaría el tamaño del contenedor, 
+    * que es $nav-width (unos 48px) y no se ve na' e ná
+    */
+    width: 200px;
+    z-index: -1;
+    height: 80px;
+  }
+// Ocultamos el checkbox
+	 .checkbox__hack {
+	 	display: none;
+
+		/*
+	 	 * Quitamos el overflow:hidden para que se muestre el menú cuando
+       * el checkbox está :checked
+	 	 * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
+	 	 * (Eso y el content del after para que sea una X y no la hamburguesa)
+	 	 */
+
+		&:checked {
+	 	 	~ .nav--top {
+              overflow: visible;
+              
+              &::after {
+                content:"x";
+              }
+	 	 	}
+		 }
+	 }
