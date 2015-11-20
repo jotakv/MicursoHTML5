@@ -1,0 +1,59 @@
+*{
+	box-sizing;border-box;
+	/*aqui faltarian los prefijos de navegadores*/
+}
+
+/*soy un media query*/
+/*suelen colocarse al final*/
+/*esto quiere decir que desde esta resolucion hasta el siguiente punto se aplica la regla*/
+/*cuando la resolucion llegue a 600 el color de fondo se pone rojo*/
+/*se puede llegar a controloar las resoluciones para tosod los dispositivos*/
+@media all and (min-width: 600px){
+	html{
+		font-size:100%;
+	}
+	section{
+		background-color: red;
+	}
+}
+
+
+/*cuando la resolucion sea de */
+
+
+@media all and (min-width: 400px){
+	html{
+		font-size:100%;
+	}
+	section{
+		background-color: red;
+	}
+}
+
+
+/*esto hace que cunado se imprima la web sea en blanco y negro*/
+@media print {
+	*{
+		color:black!important;
+		background-color: transparent;
+		background-image: none;
+		/*agraego*/
+	}
+}
+
+*, *::before, *::after{
+	-webkitbox-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body{
+
+		color: #1B1D1C;
+		background: transparent;
+		 font-family: 'Open Sans', sans-serif;
+		 /*esto es un reset*/
+		 margin: 0;
+		 padding:0;
+		 outline: 0 ;
+		 vertical-align: baseline;
+}

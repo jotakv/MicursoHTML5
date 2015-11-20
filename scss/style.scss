@@ -1,0 +1,11 @@
+$color-base:gray;
+$main-font:Georgia;
+$section-color:green;
+body{
+	background-color:$color-base;
+	font-family:$main-font;
+}
+
+section{
+	background-color: $section-color;
+}
